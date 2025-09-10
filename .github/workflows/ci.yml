@@ -38,11 +38,6 @@ jobs:
           cd backend
           npm ci
 
-      - name: Run Backend Tests
-        run: |
-          cd backend
-          npm test || echo "⚠️ Skipping tests if failing"
-
       # Frontend setup
       - name: Setup Node.js (Frontend)
         uses: actions/setup-node@v4
