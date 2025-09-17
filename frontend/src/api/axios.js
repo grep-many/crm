@@ -14,4 +14,14 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
+api.interceptors.response.use(
+    response=>response,
+    error=>{
+        if(error.status===401){
+            localStorage.clear();
+            window.location.href="/";
+        }
+    }
+)
+
 export default api;
