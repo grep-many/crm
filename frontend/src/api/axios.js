@@ -19,7 +19,7 @@ api.interceptors.response.use(
     error=>{
         if(error.status===401){
             localStorage.clear();
-            window.location.href="/";
+            window.location.href="/crm";
         }
     }
 )
